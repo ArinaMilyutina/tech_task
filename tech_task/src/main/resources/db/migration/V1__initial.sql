@@ -140,3 +140,20 @@ CREATE TABLE book_genres (
                              PRIMARY KEY (book_id, genre),
                              FOREIGN KEY (book_id) REFERENCES books (id) ON DELETE CASCADE
 );
+INSERT INTO genres (genre_name)
+VALUES ('Fiction'),
+       ('Classic'),
+       ('Dystopian'),
+       ('Fantasy'),
+       ('Adventure'),
+       ('Romance'),
+       ('Historical'),
+       ('Philosophical'),
+       ('Mystery'),
+       ('Thriller'),
+       ('Horror'),
+       ('Non-Fiction'),
+       ('Self-Help'),
+       ('Biography'),
+       ('Memoir'),
+       ('History');
