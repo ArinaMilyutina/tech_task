@@ -24,6 +24,7 @@ CREATE TABLE member_books
     FOREIGN KEY (book_id) REFERENCES books (id)
 );
 
+
 INSERT INTO members (name, membership_date)
 VALUES ('Alice Smith', '2023-01-15 10:00:00'),
        ('Bob Johnson', '2022-05-22 14:30:00'),
@@ -125,3 +126,5 @@ VALUES (1, 1),
        (17, 11),
        (18, 9);
 
+ALTER TABLE books
+    DROP COLUMN genre;
