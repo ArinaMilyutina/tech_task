@@ -128,6 +128,7 @@ VALUES (1, 1),
 
 ALTER TABLE books
     DROP COLUMN genre;
+
 CREATE TABLE genres
 (
     id         SERIAL PRIMARY KEY,
