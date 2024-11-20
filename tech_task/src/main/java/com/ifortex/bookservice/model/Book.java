@@ -1,11 +1,6 @@
 package com.ifortex.bookservice.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,17 +17,18 @@ import java.util.Set;
 @EqualsAndHashCode
 @NoArgsConstructor
 public class Book {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-  private String title;
-  private String description;
-  private String author;
+    private String title;
+    private String description;
+    private String author;
 
-  @Column(name = "publication_date")
-  private LocalDateTime publicationDate;
-
-  @Column(name = "genre")
-  private Set<String> genres;
+    @Column(name = "publication_date")
+    private LocalDateTime publicationDate;
+    @ElementCollection
+    @CollectionTable(name = "book_genres", joinColumns = @JoinColumn(name = "book_id"))
+    @Column(name = "genre")
+    private Set<String> genres;
 }
