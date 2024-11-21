@@ -14,12 +14,12 @@ import java.util.List;
 public class MyESMemberServiceImpl implements MemberService {
     @PersistenceContext
     private EntityManager entityManager;
-    private final String FIND_MEMBERS = "SELECT m.id, m.name, m.membership_date\n" +
+    private final static String FIND_MEMBERS = "SELECT m.id, m.name, m.membership_date\n" +
             "FROM members m\n" +
             "         LEFT JOIN member_books mb ON m.id = mb.member_id\n" +
             "WHERE EXTRACT(YEAR FROM m.membership_date) = 2023\n" +
             "  AND mb.book_id IS NULL;";
-    private final String FIND_MEMBER = "SELECT m.name,\n" +
+    private static final String FIND_MEMBER = "SELECT m.name,\n" +
             "       m.membership_date,\n" +
             "    m.id\n" +
             "\n" +
