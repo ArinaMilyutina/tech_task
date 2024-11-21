@@ -3,6 +3,7 @@ package com.ifortex.bookservice.controller;
 import com.ifortex.bookservice.dto.SearchCriteria;
 import com.ifortex.bookservice.model.Book;
 import com.ifortex.bookservice.service.BookService;
+import com.ifortex.bookservice.service.impl.MyESBookServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class BookController {
 
-  private final BookService bookService;
+  private final MyESBookServiceImpl bookService;
 
   @GetMapping("statistic")
   public Map<String, Long> getStatistic() {
