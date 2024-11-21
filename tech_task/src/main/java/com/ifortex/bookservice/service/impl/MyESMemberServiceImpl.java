@@ -59,4 +59,4 @@ public class MyESMemberServiceImpl implements MemberService {
 }
 
 /*I created this class to implement the MemberService interface
- and place your implementation in the existing impl package*/
+ and place my implementation in the existing impl package*/
