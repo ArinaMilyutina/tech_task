@@ -2,7 +2,6 @@ package com.ifortex.bookservice.controller;
 
 import com.ifortex.bookservice.dto.SearchCriteria;
 import com.ifortex.bookservice.model.Book;
-import com.ifortex.bookservice.service.BookService;
 import com.ifortex.bookservice.service.impl.MyESBookServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.lang.Nullable;
