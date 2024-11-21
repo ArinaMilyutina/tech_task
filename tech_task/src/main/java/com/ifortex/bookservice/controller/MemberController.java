@@ -17,7 +17,7 @@ public class MemberController {
     private final MyESMemberServiceImpl memberService;
 
 
-    @GetMapping("amateur")
+    @GetMapping("/amateur")
     public Member findMember() {
         return memberService.findMember();
     }

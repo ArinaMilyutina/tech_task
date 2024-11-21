@@ -20,12 +20,12 @@ public class BookController {
 
   private final MyESBookServiceImpl bookService;
 
-  @GetMapping("statistic")
+  @GetMapping("/statistic")
   public Map<String, Long> getStatistic() {
     return bookService.getBooks();
   }
 
-  @GetMapping("search")
+  @GetMapping("/search")
   public List<Book> findBooks(@RequestBody @Nullable SearchCriteria searchCriteria) {
     return bookService.getAllByCriteria(searchCriteria);
   }
